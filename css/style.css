@@ -1,9 +1,9 @@
 /********** Template CSS ca9630  355EFC #011A41**********/
 :root {
   --primary: #ca9630;
-  --secondary: #E93C05;
+  --secondary: #e93c05;
   --tertiary: #555555;
-  --light: #DFE4FD;
+  --light: #dfe4fd;
   --dark: #000000ff;
 }
 
@@ -39,43 +39,42 @@ h6,
   font-weight: 500 !important;
 }
 
-
 /*** Spinner ***/
 #spinner {
   opacity: 0;
   visibility: hidden;
-  transition: opacity .5s ease-out, visibility 0s linear .5s;
+  transition: opacity 0.5s ease-out, visibility 0s linear 0.5s;
   z-index: 99999;
 }
 
 #spinner.show {
-  transition: opacity .5s ease-out, visibility 0s linear 0s;
+  transition: opacity 0.5s ease-out, visibility 0s linear 0s;
   visibility: visible;
   opacity: 1;
 }
 
-.float{
-  position:fixed;
-  width:60px;
-  height:60px;
-  bottom:40px;
-  right:40px;
-  background-color:#25d366;
-  color:#FFF;
-  border-radius:50px;
-  text-align:center;
-  font-size:30px;
+.float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  right: 40px;
+  background-color: #25d366;
+  color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
   box-shadow: 2px 2px 3px #999;
-  z-index:100;
+  z-index: 100;
 }
 
-.my-float{
-  margin-top:16px;
+.my-float {
+  margin-top: 16px;
 }
 
 /*** Button ***/
 .btn {
-  transition: .5s;
+  transition: 0.5s;
   font-weight: 500;
 }
 
@@ -109,15 +108,14 @@ h6,
   font-weight: normal;
 }
 
-
 /*** Navbar ***/
 .fixed-top {
-  transition: .5s;
+  transition: 0.5s;
 }
 
 .top-bar {
   height: 45px;
-  border-bottom: 1px solid rgba(53, 94, 252, .07);
+  border-bottom: 1px solid rgba(53, 94, 252, 0.07);
   background-color: black;
 }
 
@@ -132,7 +130,7 @@ h6,
 
 .navbar .navbar-nav .nav-link {
   padding: 25px 15px;
-  color: var(--light);;
+  color: var(--light);
   font-weight: 500;
   outline: none;
 }
@@ -145,7 +143,7 @@ h6,
 @media (max-width: 991.98px) {
   .navbar .navbar-nav {
     margin-top: 10px;
-    border-top: 1px solid rgba(0, 0, 0, .07);
+    border-top: 1px solid rgba(0, 0, 0, 0.07);
     background: #000000;
   }
 
@@ -161,14 +159,14 @@ h6,
     top: 100%;
     transform: rotateX(-75deg);
     transform-origin: 0% 0%;
-    transition: .5s;
+    transition: 0.5s;
     opacity: 0;
   }
 
   .navbar .nav-item:hover .dropdown-menu {
     transform: rotateX(0deg);
     visibility: visible;
-    transition: .5s;
+    transition: 0.5s;
     opacity: 1;
   }
 
@@ -176,7 +174,6 @@ h6,
     background-color: black;
   }
 }
-
 
 /*** Header ***/
 .carousel-caption {
@@ -189,6 +186,38 @@ h6,
   justify-content: center;
   text-align: start;
   z-index: 1;
+  overflow: hidden;
+}
+
+.carousel-item {
+  min-height: 600px; /* Ensures minimum height for large screens */
+  position: relative;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.carousel-caption h1 {
+  font-size: calc(2rem + 2vw); /* Responsive font size */
+  color: white; /* Text color */
+  text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000,
+    -1px 1px 0 #000; /* Creates a black border around the text */
+}
+
+@media (max-width: 768px) {
+  .carousel-caption {
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .carousel-caption h1 {
+    font-size: 1.5rem;
+    text-shadow: 0.5px 0.5px 0 #000, -0.5px -0.5px 0 #000, 0.5px -0.5px 0 #000,
+      -0.5px 0.5px 0 #000; /* Adjust border size for smaller screens */
+  }
 }
 
 .carousel-control-prev,
@@ -238,16 +267,15 @@ h6,
   font-weight: 500;
 }
 
-.page-header .breadcrumb-item+.breadcrumb-item::before {
+.page-header .breadcrumb-item + .breadcrumb-item::before {
   color: var(--tertiary);
 }
 
-
 /*** Facts ***/
 .facts {
-  background: linear-gradient(rgba(255, 0, 0), rgba(53, 94, 252, .95)), url(../img/bg.png);
+  background: linear-gradient(rgba(255, 0, 0), rgba(53, 94, 252, 0.95)),
+    url(../img/bg.png);
 }
-
 
 /*** Callback ***/
 .callback {
@@ -261,15 +289,15 @@ h6,
   height: 50%;
   top: 0;
   left: 0;
-  background: linear-gradient(rgba(53, 94, 252, .95), rgba(53, 94, 252, .95)), url(../img/bg.png);
+  background: linear-gradient(rgba(53, 94, 252, 0.95), rgba(53, 94, 252, 0.95)),
+    url(../img/bg.png);
   z-index: -1;
 }
-
 
 /*** Feature ***/
 .feature .feature-box,
 .feature .feature-box * {
-  transition: .5s;
+  transition: 0.5s;
 }
 
 .feature .feature-box:hover {
@@ -278,13 +306,12 @@ h6,
 }
 
 .feature .feature-box:hover * {
-  color: #FFFFFF !important;
+  color: #ffffff !important;
 }
-
 
 /*** Service ***/
 .service .nav .nav-link {
-  transition: .5s;
+  transition: 0.5s;
 }
 
 .service .nav .nav-link.active {
@@ -293,13 +320,12 @@ h6,
 }
 
 .service .nav .nav-link.active h5 {
-  color: #FFFFFF !important;
+  color: #ffffff !important;
 }
 
 .service .nav .nav-link.active h5 i {
-  color: #FFFFFF !important;
+  color: #ffffff !important;
 }
-
 
 /*** Project ***/
 .project-item,
@@ -313,13 +339,13 @@ h6,
   height: 100%;
   top: 0;
   left: 0;
-  background: rgba(255, 255, 255, .5);
+  background: rgba(255, 255, 255, 0.5);
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 8px;
   opacity: 0;
-  transition: .5s;
+  transition: 0.5s;
 }
 
 .project-item:hover .project-img a {
@@ -338,7 +364,7 @@ h6,
   align-items: flex-end;
   padding: 18px;
   z-index: -1;
-  transition: .5s;
+  transition: 0.5s;
 }
 
 .project-item:hover .project-title {
@@ -347,11 +373,11 @@ h6,
 }
 
 .project-item .project-title h4 {
-  transition: .5s;
+  transition: 0.5s;
 }
 
 .project-item:hover .project-title h4 {
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .project-carousel .owl-nav {
@@ -372,7 +398,7 @@ h6,
   background: var(--light);
   border-radius: 45px;
   font-size: 22px;
-  transition: .5s;
+  transition: 0.5s;
 }
 
 .project-carousel .owl-nav .owl-prev:hover,
@@ -381,46 +407,33 @@ h6,
   color: var(--light);
 }
 
-
 /*** Team ***/
 .team-item {
   position: relative;
-  padding: 4rem 0;
+  padding: 2rem 0; /* Adjusted padding to better fit the content */
+  overflow: hidden; /* Ensures no overflow */
+  border: 1px solid #ddd; /* Adding a border for visibility */
+  border-radius: 15px; /* Optional: Rounded corners */
 }
 
 .team-item img {
-  position: relative;
-  z-index: 2;
+  width: 100%; /* Ensures the image fills the width of the container */
+  height: 300px; /* Fixed height to ensure it fits within the container */
+  object-fit: cover; /* Ensures the image covers the area without stretching */
 }
 
 .team-item .team-text {
   position: absolute;
-  top: 0;
-  right: 3rem;
   bottom: 0;
-  left: 3rem;
-  padding: 15px;
-  border: 1px solid var(--light);
-  border-radius: 8px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  transition: .5s;
-  z-index: 1;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  background: rgba(3, 3, 3, 0.8);
+  text-align: center;
 }
 
-.team-item:hover .team-text {
-  background: var(--primary);
-  border-color: var(--primary);
-}
-
-.team-item .team-text h4 {
-  transition: .5s;
-}
-
-.team-item:hover .team-text h4 {
-  color: #FFFFFF;
+.team-item .team-social {
+  margin-top: 10px;
 }
 
 .team-item .team-social .btn {
@@ -429,7 +442,7 @@ h6,
 }
 
 .team-item:hover .team-social .btn {
-  background: #FFFFFF;
+  background: #ffffff;
 }
 
 .team-item .team-social .btn:hover {
@@ -437,6 +450,19 @@ h6,
   color: var(--light);
 }
 
+.team-item:hover .team-text {
+  background: var(--primary);
+  border-color: var(--primary);
+}
+
+.team-item .team-text h4 {
+  margin: 0;
+  transition: 0.5s;
+}
+
+.team-item:hover .team-text h4 {
+  color: #ffffff;
+}
 
 /*** Testimonial ***/
 .testimonial-item {
@@ -448,6 +474,7 @@ h6,
 .testimonial-item .testimonial-text {
   position: relative;
   text-align: center;
+  color: white;
 }
 
 .testimonial-item .testimonial-text .btn-square {
@@ -476,7 +503,7 @@ h6,
   left: 50%;
   transform: translateX(-50%);
   border: 30px solid;
-  border-color: #FFFFFF transparent transparent transparent;
+  border-color: #ffffff transparent transparent transparent;
 }
 
 .testimonial-carousel .owl-item img {
@@ -500,7 +527,7 @@ h6,
   height: 30px;
   border: 1px solid var(--light);
   border-radius: 30px;
-  transition: .5s;
+  transition: 0.5s;
 }
 
 .testimonial-carousel .owl-dot::after {
@@ -512,7 +539,7 @@ h6,
   left: 6px;
   border-radius: 16px;
   background: var(--light);
-  transition: .5s;
+  transition: 0.5s;
 }
 
 .testimonial-carousel .owl-dot.active {
@@ -523,7 +550,6 @@ h6,
   background: #000;
 }
 
-
 /*** Footer ***/
 .footer .btn.btn-link {
   display: block;
@@ -533,7 +559,7 @@ h6,
   color: var(--light);
   font-weight: normal;
   text-transform: capitalize;
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .footer .btn.btn-link::before {
