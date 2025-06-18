@@ -119,6 +119,30 @@ h6,
   background-color: black;
 }
 
+/* Custom style for hamburger menu icon */
+.navbar-toggler {
+  background-color: #ca9630; /* Using the primary color from the site */
+  position: relative;
+  margin-left: 10px;
+  padding: 8px 12px;
+  border-radius: 5px;
+  border: none;
+  z-index: 1000;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar-toggler:focus {
+  box-shadow: 0 0 0 0.25rem rgba(202, 150, 48, 0.5);
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  width: 1.5em;
+  height: 1.5em;
+}
+
 .navbar .dropdown-toggle::after {
   border: none;
   content: "\f107";
@@ -141,6 +165,14 @@ h6,
 }
 
 @media (max-width: 991.98px) {
+  .navbar {
+    position: relative;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+  }
+  
   .navbar .navbar-nav {
     margin-top: 10px;
     border-top: 1px solid rgba(0, 0, 0, 0.07);
@@ -149,6 +181,30 @@ h6,
 
   .navbar .navbar-nav .nav-link {
     padding: 10px 0;
+  }
+  
+  /* Adjust the brand/logo size for mobile */
+  .navbar-brand {
+    flex: 1;
+    margin-right: 0;
+  }
+  
+  .navbar-brand h1 {
+    font-size: 1.2rem;
+    white-space: normal;
+    line-height: 1.2;
+  }
+  
+  /* Fix navbar layout for mobile */
+  .navbar > .container-fluid {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Ensure the collapse menu appears correctly */
+  .navbar-collapse {
+    width: 100%;
+    z-index: 999;
   }
 }
 
